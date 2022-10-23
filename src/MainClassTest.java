@@ -2,8 +2,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class MainClassTest extends MainClass {
-    public MainClassTest() {
-    }
 
     @Test
     public void testGetLocalNumber() {
@@ -14,5 +12,17 @@ public class MainClassTest extends MainClass {
             System.out.println("Yes");
         }
 
+    }
+
+    @Test
+    public void testGetClassNumber(){
+        int m = this.getClassNumber();
+        if (m>45) {
+            Assert.fail("Its not true." + m + "Is less then 45");
+        }
+        else {
+            System.out.println("Success " + m +" is less then 45");
+
+        }
     }
 }
