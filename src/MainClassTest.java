@@ -25,4 +25,16 @@ public class MainClassTest extends MainClass {
 
         }
     }
+
+    @Test
+    public void testGetClassString(){
+        String string = this.getClassString();
+        String substring = "Hello";
+       if (string.toLowerCase().contains(substring.toLowerCase())){
+            System.out.println("Success");
+       }
+      else {
+            Assert.assertTrue("Noooo", string.toLowerCase().contains(substring.toLowerCase()));
+       }
+    }
 }
